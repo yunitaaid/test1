@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test"></div>
+    <script>
+        //case 1
+        var input = "jika input yang dimasukkan";
+        var v = [a,u,e,o];
+
+        var n = input.replace(v,"i");
+        
+        document.getElementById("test").innerHTML = n;
+
+
+        //case 2
+        var rudi = [8,7,6,9];
+        var ani = [5,8,9,6];
+        
+        if(rudi[0] > ani[0]){
+            var nilai_rudi_1 = 1;
+            var nilai_ani_1 = 0
+
+        } else {
+            var nilai_rudi_1 = 0;
+            var nilai_ani_1 = 1;
+        }
+
+        if(rudi[1] > ani[1]){
+            var nilai_rudi_2 = 1;
+            var nilai_ani_2 = 0;
+
+        } else {
+            var nilai_rudi_2 = 0;
+            var nilai_ani_2 = 1;
+        }
+
+        if(rudi[2] > ani[2]){
+            var nilai_rudi_3 = 1;
+            var nilai_ani_3 = 0;
+
+        } else {
+            var nilai_rudi_3 = 0;
+            var nilai_ani_3 = 1;
+        }
+
+        if(rudi[3] > ani[3]){
+            var nilai_rudi_4 = 1;
+            var nilai_ani_4 = 0;
+        } else {
+            var nilai_rudi_4 = 0;
+            var nilai_ani_4 = 1;
+        }
+
+        var total_rudi = nilai_rudi_1 + nilai_rudi_2 + nilai_rudi_3 + nilai_rudi_4;
+        var total_ani = nilai_ani_1 + nilai_ani_2 + nilai_ani_3 + nilai_ani_4;
+
+        document.getElementById("test").innerHTML = total_rudi;
+        document.getElementById("test").innerHTML = total_ani;
+
+         //case 3
+        
+         var input1 = 'kodok';
+        var split = input1.split('');
+        var balik = split.reverse();
+        var join = balik.join('');
+        
+
+        if(input1 == join){
+            document.getElementById("test").innerHTML = "benar";
+        } else{
+            document.getElementById("test").innerHTML = "salah";
+        }
+        
+        //case 4
+        const array = [23, 45, 67, 90, 23, 1, 6, 90, 12, 43, 90, 67];
+        const array2 = new Set(array);
+        const array3 = [...array2]
+        document.getElementById("test").innerHTML = array3;
+
+        //case 5 
+        const array4 = [4, 5, 8, 9, 0, 2, 8, 2, 11, 15, 2, 9, 0];
+        const array5 = array4.sort();
+
+        array5.sort(function(a,b){
+            return a - b;
+        });
+        const array6 = new Set(array5);
+        const array7 = [...array6];
+        document.getElementById("test").innerHTML = array7;
+
+        //case 6
+        var input = "5I";
+        var array = [
+                        {"1A", "2A", "3A", "4A", "5A", "6A", "7A", "8A", "9A", "10A"},
+                        {"1B", "2B", "3B", "4B", "5B", "6B", "7B", "8B", "9B", "10B"},
+                        {"1C", "2C", "3C", "4C", "5C", "6C", "7C", "8C", "9C", "10C"},
+                        {"1D", "2D", "3D", "4D", "5D", "6D", "7D", "8D", "9D", "10D"},
+                        {"1E", "2E", "3E", "4E", "5E", "6E", "7E", "8E", "9E", "10E"},
+                        {"1F", "2F", "3F", "4F", "5F", "6F", "7F", "8F", "9F", "10F"},
+                        {"1G", "2G", "3G", "4G", "5G", "6G", "7G", "8G", "9G", "10G"},
+                        {"1H", "2H", "3H", "4H", "5H", "6H", "7H", "8H", "9H", "10H"},
+                        {"1I", "2I", "3I", "4I", "5I", "6I", "7I", "8I", "9I", "10I"},
+                        {"1J", "2J", "3J", "4J", "5J", "6J", "7J", "8J", "9J", "10J"}
+                    ];
+        var ubah = array.replace(input, +"-booked");
+        document.getElementById("test").innerHTML = ubah;
+        
+        //case 7
+        var nilai = 72500;
+        var a = Math.ceil(nilai);
+        document.getElementById("test").innerHTML = a;
+
+       
+       //case 9
+       SELECT user.id, user.email, user.password, user.profile_id, profile.id, profile.nama, profile.alamat, profile.tanggal_lahir,jabatan.id,jabatan.jabatan,jabatan.kode_jabatan 
+       FROM user, profile, jabatan;
+
+       //case 10
+       SELECT profile.nama, profile.alamat, jabatan.jabatan FROM profile, jabatan WHERE profile.id = ‘’;
+
+        
+
+    </script>
+</body>
+</html>
